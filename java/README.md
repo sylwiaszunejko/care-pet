@@ -192,14 +192,14 @@ Expected output:
     > Host: localhost:8080
     > User-Agent: curl/7.72.0
     > Accept: */*
-    > 
+    >
     * Mark bundle as not supporting multiuse
     < HTTP/1.1 404 Not Found
     < Date: Fri, 11 Sep 2020 12:50:12 GMT
     < content-type: application/json
     < content-length: 77
     < connection: close
-    < 
+    <
     * Closing connection 0
     {"message":"Page Not Found","_links":{"self":{"href":"/","templated":false}}}
 
@@ -235,7 +235,7 @@ To list pet's sensors use:
 For example:
 
     $ curl http://127.0.0.1:8080/api/pet/765ac83f-9744-450b-a4ec-9d40359edeae/sensors
- 
+
     [{"type":"R","pet_id":"765ac83f-9744-450b-a4ec-9d40359edeae","sensor_id":"06ffd4ba-21e6-4973-bda9-e0346c48334c"},{"type":"P","pet_id":"765ac83f-9744-450b-a4ec-9d40359edeae","sensor_id":"14a94142-12e8-414f-861e-15571d087c41"},{"type":"R","pet_id":"765ac83f-9744-450b-a4ec-9d40359edeae","sensor_id":"25ce6029-20a2-4532-a154-d82ea8da800d"},{"type":"R","pet_id":"765ac83f-9744-450b-a4ec-9d40359edeae","sensor_id":"630b2f96-bd0c-43c1-93a7-7750229f6da8"}]
 
 To review the pet's sensors data use:
@@ -256,7 +256,7 @@ To read the pet's daily average per sensor use:
 
 For example:
 
-    $ curl http://localhost:8080/api/sensor/06ffd4ba-21e6-4973-bda9-e0346c48334c/values/day/2020-09-11                                    
+    $ curl http://localhost:8080/api/sensor/06ffd4ba-21e6-4973-bda9-e0346c48334c/values/day/2020-09-11
 
 Expected output:
 
@@ -378,7 +378,7 @@ Now your `pom.xml` will be looking something like this:
         </pluginManagement>
       </build>
     </project>
-   
+
 Now you are ready to connect to the database and start working.
 To connect to the database, do the following:
 
@@ -473,7 +473,7 @@ To get:
             .whereColumn("id")
             .isEqualTo(literal(1))
             .build();
-            
+
 To use object-data mapping (ORM) include:
 
     <dependency>
@@ -481,7 +481,7 @@ To use object-data mapping (ORM) include:
       <artifactId>java-driver-mapper-runtime</artifactId>
       <version>4.8.0-scylla-0</version>
     </dependency>
-    
+
 Add annotation processing:
 
     <build>
@@ -504,7 +504,7 @@ Add annotation processing:
         </plugin>
       </plugins>
     </build>
-    
+
 Create a mapper:
 
 ```java
@@ -603,7 +603,7 @@ Let's take a look at path 2:
         </executions>
       </plugin>
     </plugins>
-    
+
 This will copy all the dependencies to the `target/dependency` folder and create
 a `dependencies` file that can be included into the `-classpath` definition:
 
